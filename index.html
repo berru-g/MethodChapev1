@@ -4,96 +4,320 @@
 
 
 <html>
-<link rel="stylesheet" href="styleCSS.css">
-<link rel="stylesheet" href="Bouton.js">
+<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+<!--<link rel="stylesheet" href="styleCSS.CSS">
+	<link rel="stylesheet" href="Bouton.js">-->
 
-<!--format, mots clefs-->
+
 <title>MéthodChape</title>
 <meta charset='UTF-8' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Berru">
-<!--nom d'adresse suivi de mots clef pour être répertorié-->
 <meta name="keywords" content="">
-<!--mots clefs à voir avec Fredo, pour le repertoire-->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
 <head>
 
-    <!-------------logo-------------------------------------------------------------------------------->
-    <div style="text-align: center">
-        <img class=img-responsive src="src-img\mc.jpg" title="Devis gratuit sous 48H" /></div>
-
-</head>
-
-<body>
-
-    <!-----MENU déroulant-------------------------------------------------------------------------------------------->
-    <ul id="menu-demo2">
-        <li><a href="#">Made in Nantes</a>
-            <ul>
-                <li><a href="https://www.facebook.com">Nos Services</a></li>
-                <li><a href="">Nos réalisations</a></li>
-                <li><a href="FREDO\formulaire.html">DEVIS</a></li>
-
-            </ul>
-    </ul>
-
-    <!-----------------------------------------------------LIEN------------------------------------------------------------------->
-    <div id="conteneur">
-        <div>
-            <a href="formulaire.html"><img width="100" height="100" src="src-img\mail.png"></a><br/>
-        </div>
-
-        <div>
-            <a href="https://www.facebook.com/Methodchape-367312220792510/?epa=SEARCH_BOX"><img width="100" height="100" src="src-img\reseau.png"></a><br/>
-        </div>
-
-
-        <div>
-            <a href="scriptjava"><img width="100" height="100" src="src-img\tel.png" title="
-			06 08 24 34 68"></a><br/>
-        </div>
-        <!-- trouver le script pour l'ouverture auto du mode tel "en lien" android ou pc-->
-    </div>
-
-
-
-    <div class="camion">
-        <!-------------------------------------------CAMION   CSS----->
-
-        <a href="https://github.com/berru-g">
-            <img width="320" height="121" src="src-img\camion.png" title="Site développé par Berru"></a>
-    </div>
-
     <style>
-        #conteneur {
-            display: flex;
-            justify-content: space-around;
-            align-content: flex-end;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-bottom: 20px;
-            text-decoration: none;
-            cursor: wait;
-        }
-        
-        #logo {
-            position: absolute;
-            display: inline-flex;
-            width: auto;
-            height: 45px;
-            margin-bottom: auto;
+            html {
+            width: 100%;
+            height: 100%;
         }
         
         body {
-            background-color: #1a1a1a;
-            /* Le fond de la page sera noir */
-            background-position: fixed absolute;
+            background: linear-gradient(#1a1a1a 50%, #f6ad20 50%);
             color: #f6ad20;
-            /* Le texte de la page sera blanc */
-            font-family: sans-serif;
+            font-family: monospace;
         }
-        /*animation mouvement horizontal (renomer l'img en <h1>)*/
+        /* menu ne fonctionne pas sur iphone x
+.footer {
+  display: flex;
+  align-items: flex-start;
+}
+.text-footer {
+ align-self: flex-end;
+  text-align: center;
+}*/
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            color: #f6ad20;
+            text-align: center;
+            font-size: 100%;
+        }
+        
+        #flex-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+        /*------------btn facebook et hamburger-----------------*/
+        
+        #conteneur1
+        /*--boutons--*/
+        
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            top: 20px;
+            right: -10;
+        }
+        
+        .agree {
+            width: 150%;
+            height: auto;
+            margin-top: 50px;
+        }
+        /*
+		.footer {
+			
+			text-align: center;
+			background-color:#f6ad20;
+			color: #1a1a1a;
+			margin: 10;
+			padding:40;
+			widows: 100%;
+		}
+		
+		.footer-menu {
+			
+			text-align: center;
+			background-color: #1a1a1a;
+			max-width: 500px;
+			height:200px;
+			margin: 10;
+			padding:40;
+			
+		}
+*/
+        
+        .logoMC {
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+            height: 100%;
+            width: 100%;
+            cursor: url(https://github.com/berru-g/berru-g.io/blob/master/MethodChape/truel-cursor-50px.png?raw=true) 50 50, pointer;
+        }
+        
+        .logo {
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+        }
+        
+        p {
+            color: #1a1a1a;
+            font-size: 90%;
+            text-align: center;
+            align-self: flex-end;
+            position: sticky;
+            bottom: 10px;
+        }
+        
+        .signature {
+            position: absolute;
+            left: 44%;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 9px;
+            margin-bottom: 10px;
+            color: #7c7c7c59;
+            cursor: zoom-in;
+        }
+        
+        .info {
+            justify-content: center;
+            display: flex;
+        }
+        
+        h1 {
+            /*footer*/
+            color: #1a1a1a;
+            font-size: 10px;
+            font-decoration: none;
+            text-align: center;
+        }
+        
+        * {
+            margin: 10;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* fond "transitions" STYLES */
+        
+        :root {
+            --primary-color: #0000002d;
+            --overlay-color: #f6ad20;
+            --menu-speed: 0.75s;
+        }
+        /* MENU STYLES */
+        
+        .menu-wrap {
+            max-height: 40%;
+            width: 40%;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .menu-wrap .toggler {
+            /*bouton d'origine*/
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            opacity: 0;
+        }
+        
+        .menu-wrap .hamburger {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        /* Hamburger Line */
+        
+        .menu-wrap .hamburger>div {
+            position: relative;
+            flex: none;
+            width: 50px;
+            height: 5px;
+            background: #f6ad20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s ease;
+        }
+        /* Hamburger Lines - Top & Bottom */
+        
+        .menu-wrap .hamburger>div::before,
+        .menu-wrap .hamburger>div::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: -20px;
+            /*ecartement des barres*/
+            width: 100%;
+            height: 5px;
+            background: inherit;
+        }
+        /* Moves Line Down */
+        
+        .menu-wrap .hamburger>div::after {
+            top: 20px;
+            /*ecartement des barres*/
+        }
+        /* Toggler Animation */
+        
+        .menu-wrap .toggler:checked+.hamburger>div {
+            transform: rotate(135deg);
+        }
+        /* Turns Lines Into X */
+        
+        .menu-wrap .toggler:checked+.hamburger>div:before,
+        .menu-wrap .toggler:checked+.hamburger>div:after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+        /* Rotate On Hover When Checked */
+        
+        .menu-wrap .toggler:checked:hover+.hamburger>div {
+            transform: rotate(225deg);
+        }
+        /* Show Menu */
+        
+        .menu-wrap .toggler:checked~.menu {
+            visibility: visible;
+        }
+        
+        .menu-wrap .toggler:checked~.menu>div {
+            transform: scale(2);
+            transition-duration: var(--menu-speed);
+        }
+        
+        .menu-wrap .toggler:checked~.menu>div>div {
+            opacity: 1;
+            transition: opacity 0.4s ease 0.4s;
+        }
+        
+        .menu-wrap .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .menu-wrap .menu>div {
+            background: var(--overlay-color);
+            border-radius: 50%;
+            width: 1000px;
+            height: 1000px;
+            display: flex;
+            flex: none;
+            align-items: center;
+            justify-content: center;
+            transform: scale(0);
+            /*temps de transition typ*/
+            transition: all 0.4s ease;
+        }
+        
+        .menu-wrap .menu>div>div {
+            text-align: center;
+            max-width: 80vw;
+            max-height: 700px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .menu-wrap .menu>div>div>ul>li {
+            list-style: none;
+            color: #1a1a1a;
+            font-size: 10px;
+            padding: 30px;
+            font-family: monospace;
+        }
+        
+        .menu-wrap .menu>div>div>ul>li>a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+        
+        .firstbox {
+            display: flex;
+        }
         
         .camion {
             width: 320px;
@@ -107,127 +331,526 @@
                 right: -10px;
             }
             to {
-                right: 1500px;
+                right: 1400px;
             }
         }
+        /*--------BOUTON CONTENEUR1-----------------------------------------------------------------------*/
         
-        img {
-            align-content: center;
-        }
-        /*-----------------------------------------------------------------------------*/
-        
-        #menu-demo2,
-        #menu-demo2 ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            text-align: center;
-        }
-        
-        #menu-demo2 li {
-            display: inline-block;
-            position: relative;
-            border-radius: 8px 8px 0 0;
-        }
-        
-        #menu-demo2 ul li {
-            display: inherit;
-            border-radius: 0;
-        }
-        
-        #menu-demo2 ul li:hover {
-            border-radius: 0;
-        }
-        
-        #menu-demo2 ul li:last-child {
-            border-radius: 0 0 8px 8px;
-        }
-        
-        #menu-demo2 ul {
+        .button {
+            width: 70px;
+            height: 70px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            /* comment importer son propre curseur bordel?!!  
+  cursor: url("https://github.com/berru-g/berru-g.io/blob/master/Berru%20site%20vitrine/CURSOR.png?raw=true") ;
+  size cursor: 32px,32px;
+*/
+            line-height: 70px;
             position: absolute;
-            z-index: 1000;
-            max-height: 0;
-            left: 0;
-            right: 0;
-            overflow: hidden;
-            -moz-transition: .8s all .3s;
-            -webkit-transition: .8s all .3s;
-            transition: .8s all .3s;
-        }
-        
-        #menu-demo2 li:hover ul {
-            max-height: 15em;
-        }
-        /* background des liens menus */
-        
-        #menu-demo2 li:first-child {
-            background-color: #1a1a1a;
-            background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #1a1a1a 100%);
-            background-image: linear-gradient(to bottom, #1a1a1a 0%, #1a1a1a 100%);
-        }
-        
-        #menu-demo2 li:nth-child(2) {
-            background-color: #1a1a1a;
-            background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #1a1a1a 100%);
-            background-image: linear-gradient(to bottom, #1a1a1a 0%, #1a1a1a 100%);
-        }
-        
-        #menu-demo2 li:last-child {
-            background-color: #1a1a1a;
-            background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #1a1a1a 100%);
-            background-image: linear-gradient(to bottom, #1a1a1a 0%, #1a1a1a 100%);
-        }
-        /* background des liens sous menus */
-        
-        #menu-demo2 li:first-child li {
-            background: #1a1a1a;
-        }
-        
-        #menu-demo2 li:last-child li {
-            background: #f6ad20;
-            /*couleur au survol des sous menu*/
-        }
-        /* les a href */
-        
-        #menu-demo2 a {
-            text-decoration: none;
-            display: block;
-            padding: 8px 100px;
+            /*position de la page*/
+            left: center;
+            top: center;
             color: #f6ad20;
+            opacity: 1;
+            text-decoration: none;
+            background: linear-gradient(#1a1a1a7a 50%, #1a1a1a7a 50%);
+            text-align: center;
+            font-size: 35px;
             font-family: sans-serif;
+            position: fixed;
+            top: 1%;
+            right: 1%;
         }
         
-        #menu-demo2 ul a {
-            padding: 8px 0;
-        }
-        
-        #menu-demo2 li:hover li a {
+        .button:hover {
+            background: linear-gradient(#2f55a4 50%, #3b5998);
+            opacity: 1;
             color: #fff;
-            text-transform: inherit;
-        }
-        
-        #menu-demo2 li:hover a,
-        #menu-demo2 li li:hover a {
-            color: #000;
-        }
+            .button:active {
+                background: #fff;
+                color: #3b5998;
+            }
     </style>
 
-    <footer>
+    <!-------------logo------------------------------------------------------------------------------
+	<div style="text-align: center">
 
-        <div class="footer" title="Clique sur le camion pour visiter mon site">
-            <p>Made with 💚 by Berru</p>
-        </div>
+		<img class="logo" src="https://github.com/berru-g/berru-g.io/blob/master/MethodChape/mc.jpg?raw=true"
+			title="Devis gratuit sous 48H" />
+	</div>
 
 
-        <!--------------------------------------------------
-<div style="text-align: center">
+	<style>
+		.logo {
+			display: flex;
+			max-height: 300px;
+			align-items: center;
+
+		}
+
+		body {
+
+			background-color: #1a1a1a;
+			/* Le fond de la page sera noir */
+			background-position: fixed absolute;
+			color: #f6ad20;
+			/* Le texte de la page sera blanc */
+			font-family: sans-serif;
+		}
+
+		.img {
+			position: center;
+			max-width: 100%;
+			height: auto;
+			display: block;
+
+		}
+	</style>
+
+
+<body>
+
 	
-       <div class="logo">
-	       <a href="C:\Users\glebe\Documents\PROG HTML\Berru site vitrine\Berru site vitrine.html">
-		   <img width="100" height="45" src="C:\Users\glebe\Documents\PROG HTML\Berru site vitrine\LOGO BLAZE.png"  title="Développé par Berru"/></h1></div>
-	   </div>
-------->
+	<ul id="menu-demo2">
+		<li><a href="#">Made in Nantes</a>
+			<ul>
+				<li><a href="https://www.facebook.com/lesflaneriesnantes/">Nos Services</a></li>
+				<li><a href="file:///C:/Users/glebe/Documents/PROG%20HTML/Berru%20site%20vitrine/LA%20DEMARCHE.html">Nos
+						réalisations</a></li>
+				<li><a href="C:\Users\glebe\Documents\PROG HTML\FREDO\formulaire.html">DEVIS</a></li>
+
+			</ul>
+	</ul>
+	<style>
+		#menu-demo2,
+		#menu-demo2 ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			text-align: center;
+		}
+
+		#menu-demo2 li {
+			display: inline-block;
+			position: relative;
+			border-radius: 8px 8px 0 0;
+		}
+
+		#menu-demo2 ul li {
+			display: inherit;
+			border-radius: 0;
+		}
+
+		#menu-demo2 ul li:hover {
+			border-radius: 0;
+		}
+
+		#menu-demo2 ul li:last-child {
+			border-radius: 0 0 8px 8px;
+		}
+
+		#menu-demo2 ul {
+			position: absolute;
+			z-index: 1000;
+			max-height: 0;
+			left: 0;
+			right: 0;
+			overflow: hidden;
+			-moz-transition: .8s all .3s;
+			-webkit-transition: .8s all .3s;
+			transition: .8s all .3s;
+		}
+
+		#menu-demo2 li:hover ul {
+			max-height: 15em;
+		}
+
+		/* background des liens menus */
+		#menu-demo2 li:first-child {
+			background-color: #1a1a1a;
+			background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #1a1a1a 100%);
+			background-image: linear-gradient(to bottom, #1a1a1a 0%, #1a1a1a 100%);
+		}
+
+		#menu-demo2 li:nth-child(2) {
+			background-color: #1a1a1a;
+			background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #1a1a1a 100%);
+			background-image: linear-gradient(to bottom, #1a1a1a 0%, #1a1a1a 100%);
+		}
+
+		#menu-demo2 li:last-child {
+			background-color: #1a1a1a;
+			background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #1a1a1a 100%);
+			background-image: linear-gradient(to bottom, #1a1a1a 0%, #1a1a1a 100%);
+		}
+
+		/* background des liens sous menus */
+		#menu-demo2 li:first-child li {
+			background: #1a1a1a;
+		}
+
+		#menu-demo2 li:last-child li {
+			background: #f6ad20;
+			/*couleur au survol des sous menu*/
+		}
+
+		/* les a href */
+		#menu-demo2 a {
+			text-decoration: none;
+			display: block;
+			padding: 8px 100px;
+			color: #f6ad20;
+			font-family: sans-serif;
+
+		}
+
+		#menu-demo2 ul a {
+			padding: 8px 0;
+		}
+
+		#menu-demo2 li:hover li a {
+			color: #7c7c7c59;
+			text-transform: inherit;
+		}
+
+		#menu-demo2 li:hover a,
+		#menu-demo2 li li:hover a {
+			color: #000;
+		}
+	</style>
+
+
+
+
+	<div id="conteneur">
+
+		<div>
+			<a href="C:\Users\glebe\Documents\PROG HTML\MethodChape\formulaire.html"><img width="100" height="100"
+					src="https://github.com/berru-g/berru-g.io/blob/master/MethodChape/mail.png?raw=true"></a><br />
+		</div>
+
+		<div>
+			<a href="https://www.facebook.com/Methodchape-367312220792510/?epa=SEARCH_BOX"><img width="100" height="100"
+					src="https://github.com/berru-g/berru-g.io/blob/master/MethodChape/reseau.png?raw=true"></a><br />
+		</div>
+
+
+		<div>
+			<a href="tel:+33608243468"><img width="100" height="100"
+					src="https://github.com/berru-g/berru-g.io/blob/master/MethodChape/tel.png?raw=true" title="
+				06 08 24 34 68"></a><br />
+		</div>
+
+		<div><a href="scriptjava"><img width="100" height="100"
+					src="https://github.com/berru-g/berru-g.io/blob/master/MethodChape/tel.png?raw=true" title="
+			06 08 24 34 68"></a><br />
+		</div>
+	</div>
+	<style>
+		#conteneur {
+			display: flex;
+			justify-content: space-around;
+			align-content: flex-start;
+		}
+	</style>
+
+
+	<div class="camion">
+		
+
+		<a href="C:\Users\glebe\Documents\PROG HTML\BERRU.COM\HTML\Berru site vitrine.html">
+			<img class="android" width="260" height="120"
+				src="https://github.com/berru-g/berru-g.io/blob/master/MethodChape/camion.png?raw=true"
+				title="Site développé par Berru"></a>
+	</div>
+	<style>
+		.android {
+			justify-content: bottom center;
+
+		}
+
+		.camion {
+			width: 320px;
+			height: 121px;
+			position: absolute;
+			animation: mymove 20s infinite;
+		}
+
+		@keyframes mymove {
+			from {
+				right: -10px;
+			}
+
+			to {
+				right: 1500px;
+			}
+		}
+
+
+		img {
+			align-content: center;
+
+		}
+	</style>
+
+
+	<footer>
+		
+		<div id="conteneur2">
+			<div class="footer" title="Clique sur le camion pour visiter mon site">
+				<p>Made with 💚 by Berru</p>
+			</div>
+		</div>
+	
+
+
+		
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"></script>
+
+		</head>
 </body>
 </footer>
 
+</html>-->
+
+
+    <!-----------VERSION-ANDROID---------VERSION-ANDROID------------------VERSION-ANDROID------------VERSION-ANDROID----------------VERSION-ANDROID-->
+
+
+
+
+    <div id="conteneur1">
+
+
+
+        <!--début de menu--------------------------->
+
+        <div class="menu-wrap">
+
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul>
+                            <!--			<li><a href="https://www.facebook.com/methodchap/">Mes Services</a></li>-->
+                            <li><a href="https://cdpn.io/h-lautre/debug/WNrObap/xnkabZQoKnOM">Besoin d'un devis?</a></li>
+                            <li><a href="tel:+33608243468">M'appeler</a></li>
+                        </ul>
+                        <div>
+                            <li>~</li>
+
+                            <li>
+                                <a class="signature" href="https://cdpn.io/h-lautre/debug/WNrbawy/xJMjOnQNpWdr" title="Site developpé par Berru">Made with 💚 by Berru</a></li>
+                        </div>
+
+                        <div class="footer-menu">
+                            <div class="firstbox">
+
+                                <div class="camion">
+                                    <a href="https://cdpn.io/h-lautre/debug/WNrbawy/xJMjOnQNpWdr">
+                                        <img class="android" width="150" height="79" src="https://github.com/berru-g/berru-g.io/blob/master/MethodChape/camion2.png?raw=true" title="Site développé par Berru"></a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div><a href="https://www.facebook.com/Methodchape-367312220792510/" class="button" title="Me suivre sur FB">f</a>
+
+        </div><br/>
+    </div>
+    <!--fin de menu-------------------------->
+
+
+    <div id="flex-container">
+
+        <div>
+            <img class="logoMC" width="900" height="281" src="https://github.com/berru-g/berru-g.io/blob/master/MethodChape/mc-d.png?raw=true" title="Devis gratuit sous 48H" />
+        </div>
+
+        <div>
+            <img class="logo" width="900" height="500" src="https://github.com/berru-g/berru-g.io/blob/master/MethodChape/fond-vide.png?raw=true" title="Entreprise Agrée"></a>
+            <p></p>
+        </div>
+
+    </div>
+
+    <!-----------------------------------------------SHARE-------------------------------------------------------------->
+
+    <div class="share">
+        <!-- Facebook -->
+        <a target="_blank" title="partager sur Facebook" href="https://www.facebook.com/sharer.php?u=" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;">
+            <i class="fab fa-facebook" style='font-size:24px;color:#1a1a1a;margin-left:20px;'></i></a>
+        <!-- //Facebook -->
+
+        <!-- Twitter -->
+        <a target="_blank" title="partager sur Twitter" href="https://twitter.com/" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;">
+            <i class="fab fa-twitter" style='font-size:24px;color:#1a1a1a;margin-left:20px;'></i></a>
+        <!-- //Twitter -->
+
+        <!-- Google + -->
+        <a target="_blank" title="partager sur Google +" href="https://plus.google.com/share?url=" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+            <i class="fab fa-google-plus" style='font-size:24px;color:#1a1a1a;margin-left:20px;'></i></a>
+        <!-- //Google + -->
+
+        <!-- Linkedin -->
+        <!---insere URL-->
+        <a target="_blank" title="partager sur Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=" rel="nofollow" onclick="javascript:window.open(this.href, '','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;">
+            <i class="fab fa-linkedin" style='font-size:24px;color:#1a1a1a;margin-left:20px;'></i></a>
+        <!-- //Linkedin -->
+
+        <!-- Email -->
+        <a target="_blank" title="Envoyer par mail" href="mailto:?Subject=Regarde ça c'est cool !&amp;Body=regarde%20cet%20article%20c'est%20super !%20 " rel="nofollow">
+            <i class="fas fa-paper-plane" style='font-size:24px;color:#1a1a1a;margin-left:20px;'></i></a>
+        <!-- //Email -->
+    </div>
+    <style>
+        .share {
+            position: fixed;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            bottom: 80px;
+            left: 40%;
+            color: #1a1a1a;
+        }
+        
+        i:hover {
+            opacity: 0.5;
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+<div class="footer">
+    <h3>©2020 EURL 'MethodChape' - Entreprise agrée- site conçu & développé par Berru.</h3>
+</div>
+<!-----------------------------teste "chat"--------
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family:sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #1a1a1a;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #f6ad20;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #fff;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #fff;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #000000;
+  color: #fff;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+
+
+<button class="open-button" onclick="openForm()">Une question?</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>MethodChape</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Envoie</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Fermer</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>--------------------------------------------->
+
+
+
+<footer>
+
+</footer>
+
+</body>
+
 </html>
+
+
+<!----VERSION-ANDROID---------------VERSION-ANDROID------------VERSION-ANDROID------VERSION-ANDROID---------------VERSION-ANDROID---------------------->
