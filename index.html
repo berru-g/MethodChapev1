@@ -30,33 +30,6 @@
             color: #f6ad20;
             font-family: monospace;
         }
-        /* menu ne fonctionne pas sur iphone x
-.footer {
-  display: flex;
-  align-items: flex-start;
-}
-.text-footer {
- align-self: flex-end;
-  text-align: center;
-}*/
-        
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: #1a1a1a;
-            color: #f6ad20;
-            text-align: center;
-            font-size: 100%;
-        }
-        
-        #flex-container {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            align-items: center;
-        }
         /*------------btn facebook et hamburger-----------------*/
         
         #conteneur1
@@ -719,37 +692,43 @@
     </div>
     <style>
         .share {
-            position: absolute;
-            /* display: flex;
-              justify-content: space-evenly;
-            flex-direction: row;*/
-            justify-content: flex-end;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
             align-items: center;
-            bottom: 80px;
-            left: 40%;
-            color: #1a1a1a;
         }
         
         i:hover {
             opacity: 0.5;
             transform: scale(1.5);
         }
-        /*  .logoMC {
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 100px;
-            height: 100%;
+        /* menu ne fonctionne pas sur iphone x
+.footer {
+  display: flex;
+  align-items: flex-start;
+}
+.text-footer {
+ align-self: flex-end;
+  text-align: center;
+}*/
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
             width: 100%;
-            cursor: url("src-img\truel-cursor-50px.png") 50 50, pointer;
+            background-color: #1a1a1a;
+            color: #f6ad20;
+            text-align: center;
+            font-size: 100%;
         }
         
-        .logo {
-            justify-content: flex-end;
+        #flex-container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            text-align: center;
-            height: 100%;
-            width: 100%;
-        }*/
+        }
     </style>
 </head>
 <div class="footer">
