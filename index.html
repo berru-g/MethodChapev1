@@ -1,0 +1,233 @@
+<!--TESTE SITE VITRINE POUR FREDO 2020-->
+<!--15 mai--SITE VITRINE +"FORMULAIRE" DEMANDE DE DEVIS et animation CSS-->
+<!--17 mai--gallerie photo-->
+
+
+<html>
+<link rel="stylesheet" href="styleCSS.css">
+<link rel="stylesheet" href="Bouton.js">
+
+<!--format, mots clefs-->
+<title>MéthodChape</title>
+<meta charset='UTF-8' />
+<meta name="description" content="Berru">
+<!--nom d'adresse suivi de mots clef pour être répertorié-->
+<meta name="keywords" content="">
+<!--mots clefs à voir avec Fredo, pour le repertoire-->
+
+<head>
+
+    <!-------------logo-------------------------------------------------------------------------------->
+    <div style="text-align: center">
+        <img class=img-responsive src="src-img\mc.jpg" title="Devis gratuit sous 48H" /></div>
+
+</head>
+
+<body>
+
+    <!-----MENU déroulant-------------------------------------------------------------------------------------------->
+    <ul id="menu-demo2">
+        <li><a href="#">Made in Nantes</a>
+            <ul>
+                <li><a href="https://www.facebook.com">Nos Services</a></li>
+                <li><a href="">Nos réalisations</a></li>
+                <li><a href="FREDO\formulaire.html">DEVIS</a></li>
+
+            </ul>
+    </ul>
+
+    <!-----------------------------------------------------LIEN------------------------------------------------------------------->
+    <div id="conteneur">
+        <div>
+            <a href="formulaire.html"><img width="100" height="100" src="src-img\mail.png"></a><br/>
+        </div>
+
+        <div>
+            <a href="https://www.facebook.com/Methodchape-367312220792510/?epa=SEARCH_BOX"><img width="100" height="100" src="src-img\reseau.png"></a><br/>
+        </div>
+
+
+        <div>
+            <a href="scriptjava"><img width="100" height="100" src="src-img\tel.png" title="
+			06 08 24 34 68"></a><br/>
+        </div>
+        <!-- trouver le script pour l'ouverture auto du mode tel "en lien" android ou pc-->
+    </div>
+
+
+
+    <div class="camion">
+        <!-------------------------------------------CAMION   CSS----->
+
+        <a href="https://github.com/berru-g">
+            <img width="320" height="121" src="src-img\camion.png" title="Site développé par Berru"></a>
+    </div>
+
+    <style>
+        #conteneur {
+            display: flex;
+            justify-content: space-around;
+            align-content: flex-end;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration: none;
+            cursor: wait;
+        }
+        
+        #logo {
+            position: absolute;
+            display: inline-flex;
+            width: auto;
+            height: 45px;
+            margin-bottom: auto;
+        }
+        
+        body {
+            background-color: #1a1a1a;
+            /* Le fond de la page sera noir */
+            background-position: fixed absolute;
+            color: #f6ad20;
+            /* Le texte de la page sera blanc */
+            font-family: sans-serif;
+        }
+        /*animation mouvement horizontal (renomer l'img en <h1>)*/
+        
+        .camion {
+            width: 320px;
+            height: 121px;
+            position: absolute;
+            animation: mymove 20s infinite;
+        }
+        
+        @keyframes mymove {
+            from {
+                right: -10px;
+            }
+            to {
+                right: 1500px;
+            }
+        }
+        
+        img {
+            align-content: center;
+        }
+        /*-----------------------------------------------------------------------------*/
+        
+        #menu-demo2,
+        #menu-demo2 ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: center;
+        }
+        
+        #menu-demo2 li {
+            display: inline-block;
+            position: relative;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        #menu-demo2 ul li {
+            display: inherit;
+            border-radius: 0;
+        }
+        
+        #menu-demo2 ul li:hover {
+            border-radius: 0;
+        }
+        
+        #menu-demo2 ul li:last-child {
+            border-radius: 0 0 8px 8px;
+        }
+        
+        #menu-demo2 ul {
+            position: absolute;
+            z-index: 1000;
+            max-height: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            -moz-transition: .8s all .3s;
+            -webkit-transition: .8s all .3s;
+            transition: .8s all .3s;
+        }
+        
+        #menu-demo2 li:hover ul {
+            max-height: 15em;
+        }
+        /* background des liens menus */
+        
+        #menu-demo2 li:first-child {
+            background-color: #1a1a1a;
+            background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #1a1a1a 100%);
+            background-image: linear-gradient(to bottom, #1a1a1a 0%, #1a1a1a 100%);
+        }
+        
+        #menu-demo2 li:nth-child(2) {
+            background-color: #1a1a1a;
+            background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #1a1a1a 100%);
+            background-image: linear-gradient(to bottom, #1a1a1a 0%, #1a1a1a 100%);
+        }
+        
+        #menu-demo2 li:last-child {
+            background-color: #1a1a1a;
+            background-image: -webkit-linear-gradient(top, #1a1a1a 0%, #1a1a1a 100%);
+            background-image: linear-gradient(to bottom, #1a1a1a 0%, #1a1a1a 100%);
+        }
+        /* background des liens sous menus */
+        
+        #menu-demo2 li:first-child li {
+            background: #1a1a1a;
+        }
+        
+        #menu-demo2 li:last-child li {
+            background: #f6ad20;
+            /*couleur au survol des sous menu*/
+        }
+        /* les a href */
+        
+        #menu-demo2 a {
+            text-decoration: none;
+            display: block;
+            padding: 8px 100px;
+            color: #f6ad20;
+            font-family: sans-serif;
+        }
+        
+        #menu-demo2 ul a {
+            padding: 8px 0;
+        }
+        
+        #menu-demo2 li:hover li a {
+            color: #fff;
+            text-transform: inherit;
+        }
+        
+        #menu-demo2 li:hover a,
+        #menu-demo2 li li:hover a {
+            color: #000;
+        }
+    </style>
+
+    <footer>
+
+        <div class="footer" title="Clique sur le camion pour visiter mon site">
+            <p>Made with 💚 by Berru</p>
+        </div>
+
+
+        <!--------------------------------------------------
+<div style="text-align: center">
+	
+       <div class="logo">
+	       <a href="C:\Users\glebe\Documents\PROG HTML\Berru site vitrine\Berru site vitrine.html">
+		   <img width="100" height="45" src="C:\Users\glebe\Documents\PROG HTML\Berru site vitrine\LOGO BLAZE.png"  title="Développé par Berru"/></h1></div>
+	   </div>
+------->
+</body>
+</footer>
+
+</html>
