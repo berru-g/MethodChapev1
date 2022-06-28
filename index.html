@@ -104,7 +104,7 @@
             margin-top: 100px;
             height: 100%;
             width: 100%;
-            cursor: url(src-img\truel-cursor-50px.png) 50 50, pointer;
+            cursor: url("src-img\truel-cursor-50px.png") 50 50, pointer;
         }
         
         .logo {
@@ -719,10 +719,12 @@
     </div>
     <style>
         .share {
-            position: fixed;
-            display: flex;
-            justify-content: space-evenly;
-            flex-direction: row;
+            position: absolute;
+            /* display: flex;
+              justify-content: space-evenly;
+            flex-direction: row;*/
+            justify-content: flex-end;
+            align-items: center;
             bottom: 80px;
             left: 40%;
             color: #1a1a1a;
@@ -732,6 +734,22 @@
             opacity: 0.5;
             transform: scale(1.5);
         }
+        /*  .logoMC {
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+            height: 100%;
+            width: 100%;
+            cursor: url("src-img\truel-cursor-50px.png") 50 50, pointer;
+        }
+        
+        .logo {
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+        }*/
     </style>
 </head>
 <div class="footer">
